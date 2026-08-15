@@ -1,6 +1,6 @@
 # Lassa Fever Machine Learning Forecasting
 
-A leakage-aware machine learning framework for forecasting weekly Lassa fever cases and classifying outbreak status using temporal surveillance data.
+A leakage-aware machine learning framework for forecasting weekly Lassa fever cases and classifying outbreak activity using temporal surveillance data.
 
 ## Project Overview
 
@@ -8,56 +8,75 @@ This project applies machine learning to weekly Lassa fever surveillance data to
 
 The workflow includes data preprocessing, exploratory analysis, temporal feature engineering, leakage prevention, regression modelling, classification modelling, hyperparameter optimization, and independent-year evaluation.
 
+## Objectives
+
+- Analyse temporal patterns in weekly Lassa fever surveillance data
+- Engineer lag-based and rolling temporal features
+- Develop regression models for weekly case forecasting
+- Develop classification models for outbreak prediction
+- Evaluate model performance using an independent 2025 test period
+
 ## Machine Learning Workflow
 
-Data Collection → Data Cleaning → Exploratory Data Analysis → Temporal Feature Engineering → Leakage Validation → Chronological Data Split → Model Training → Hyperparameter Optimization → Independent Test Evaluation
-
-## Models Used
-
-### Regression Models
-- Linear Regression
-- Random Forest Regressor
-- Support Vector Regressor
-- XGBoost Regressor
-
-### Classification Models
-- Logistic Regression
-- Random Forest Classifier
-- Support Vector Machine
-- XGBoost Classifier
+Data Loading → Data Cleaning → Exploratory Data Analysis → Temporal Feature Engineering → Leakage Validation → Chronological Split → Model Training → Hyperparameter Optimization → Independent Test Evaluation
 
 ## Validation Strategy
 
 The dataset was divided chronologically to preserve temporal integrity:
 
-- Training: Historical observations up to 2023
+- Training: historical observations up to 2023
 - Validation: 2024
 - Independent Test: 2025
 
-This approach reduces temporal information leakage and provides a more realistic evaluation of model performance.
+This approach reduces temporal information leakage and provides a more realistic assessment of model performance.
 
-## Technologies Used
+## Regression Models
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- XGBoost
-- Optuna
-- Matplotlib
-- Jupyter Notebook
+- Linear Regression
+- Random Forest Regressor
+- Support Vector Regressor
+- XGBoost Regressor
 
-## Project Files
+## Classification Models
 
-The repository will contain:
+- Logistic Regression
+- Random Forest Classifier
+- Support Vector Machine
+- XGBoost Classifier
 
-- Jupyter Notebook containing the complete machine learning workflow
-- Model evaluation results
-- Visualizations
-- Supporting documentation
+## Key Results
 
-## Author
+The optimized Support Vector Regressor achieved the strongest overall forecasting performance on the independent 2025 test data.
 
-**Paul Shir**
+The XGBoost classifier achieved strong outbreak classification performance on the independent 2025 test period.
 
-Data Analytics | Data Science | Machine Learning
+Detailed evaluation outputs are available in the `results` folder.
+
+## Visualizations
+
+### Weekly Confirmed Cases
+
+![Weekly Confirmed Cases](images/weekly_confirmed_cases.png)
+
+### Regression Model Comparison
+
+![Regression Model Comparison](images/regression_model_comparison.png)
+
+### Actual vs Predicted Cases
+
+![Actual vs Predicted](images/actual_vs_predicted_2025.png)
+
+### ROC Curve
+
+![ROC Curve](images/roc_curve.png)
+
+## Repository Structure
+
+```text
+lassa-fever-machine-learning-forecasting/
+├── data/
+├── images/
+├── notebooks/
+├── results/
+├── .gitignore
+└── README.md
