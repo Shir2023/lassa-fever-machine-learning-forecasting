@@ -1,3 +1,57 @@
-# Results
+# Final Model Evaluation Results
 
-This folder contains the output files generated from the Lassa fever machine learning analysis, including regression results, classification results, model comparison tables, and final test evaluation outputs.
+## Overview
+
+This folder contains the final evaluation outputs generated from the Lassa fever machine learning forecasting and outbreak classification framework.
+
+The results are based on the independent 2025 test dataset after model development and validation using earlier chronological observations.
+
+## Regression Results
+
+The regression models were evaluated using:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- Mean Absolute Percentage Error (MAPE)
+- Coefficient of Determination (R²)
+
+### Final 2025 Regression Performance
+
+| Model | MAE | RMSE | MAPE (%) | R² |
+|---|---:|---:|---:|---:|
+| Support Vector Regressor | 6.3546 | 8.7611 | 45.9762 | 0.8148 |
+| Linear Regression | 7.2465 | 9.4976 | 49.7240 | 0.7824 |
+| XGBoost Regressor | 6.4808 | 9.7120 | 44.9871 | 0.7724 |
+| Random Forest Regressor | 6.9055 | 10.4708 | 44.5906 | 0.7355 |
+
+The Support Vector Regressor achieved the strongest overall forecasting performance based on MAE, RMSE, and R². The Random Forest Regressor recorded the lowest MAPE.
+
+## Classification Results
+
+Classification performance was assessed using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
+
+### Final 2025 Classification Performance
+
+| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
+|---|---:|---:|---:|---:|---:|
+| Random Forest Classifier | 0.9038 | 0.8095 | 0.9444 | 0.8718 | 0.9673 |
+| XGBoost Classifier | 0.9038 | 0.8095 | 0.9444 | 0.8718 | 0.9641 |
+| Logistic Regression | 0.8462 | 0.6923 | 1.0000 | 0.8182 | 0.9542 |
+| Support Vector Machine | 0.8077 | 0.6538 | 0.9444 | 0.7727 | 0.8971 |
+
+Random Forest and XGBoost achieved the highest classification accuracy and F1-score, while Random Forest recorded the highest ROC-AUC.
+
+## Result Files
+
+The main output files in this folder include:
+
+- `final_regression_test_results.csv`
+- `final_classification_test_results.csv`
+
+These files contain the final independent-test model evaluation metrics used in the project.
