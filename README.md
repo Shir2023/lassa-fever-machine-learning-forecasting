@@ -70,6 +70,45 @@ Detailed evaluation outputs are available in the `results` folder.
 
 ![ROC Curve](images/roc_curve.png)
 
+## Repository Contents
+
+- [Jupyter Notebook](notebooks/Lassa_Fever_Machine_Learning_Dev.ipynb)
+- [Dataset](data/lassa_fever.csv)
+- [Model Evaluation Results](results/)
+- [Project Visualizations](images/)
+- [Python Requirements](requirements.txt)
+
+## How to Run the Project
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/paul-shir/lassa-fever-machine-learning-forecasting.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd lassa-fever-machine-learning-forecasting
+```
+
+3. Install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Launch Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+5. Open:
+
+```text
+notebooks/Lassa_Fever_Machine_Learning_Dev.ipynb
+```
 ## Repository Structure
 
 ```text
